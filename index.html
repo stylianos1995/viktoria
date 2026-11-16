@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Viktoria | Luxury Social Media Management</title>
+    <title data-i18n="meta.home.title">Виктория Побережная | Уроки английского онлайн</title>
     <meta
       name="description"
-      content="Viktoria builds high-end social media presences for ambitious, female-led businesses."
+      data-i18n-content="meta.home.description"
+      content="Индивидуальные онлайн-уроки английского для детей и взрослых с Викторией Побережной."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&family=Jost:wght@300;400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
@@ -19,151 +20,141 @@
   <body>
     <header class="site-header">
       <div class="header-inner">
-        <a class="logo" href="index.html">Viktoria</a>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open menu">
-          <span></span>
-        </button>
-        <nav class="site-nav" aria-label="Primary">
-          <a href="index.html" aria-current="page">Home</a>
-          <a href="about.html">About</a>
-          <a href="services.html">Services</a>
-          <a href="portfolio.html">Portfolio</a>
-          <a href="inquire.html">Inquire</a>
-        </nav>
+        <a class="logo" href="index.html" data-i18n="logo">Виктория</a>
+        <div class="header-end">
+          <nav class="site-nav" aria-label="Основное меню" data-i18n-aria="nav.label">
+            <a href="index.html" aria-current="page" data-i18n="nav.home">Главная</a>
+            <a href="about.html" data-i18n="nav.about">Обо мне</a>
+            <a href="services.html" data-i18n="nav.lessons">Занятия</a>
+            <a href="inquire.html" data-i18n="nav.book">Записаться</a>
+          </nav>
+          <div class="lang-switch" role="group" aria-label="Язык" data-i18n-aria="lang.label">
+            <button type="button" data-set-lang="ru" data-i18n-aria="lang.ru" aria-label="Русский" aria-pressed="true">
+              RU
+            </button>
+            <span aria-hidden="true">/</span>
+            <button type="button" data-set-lang="en" data-i18n-aria="lang.en" aria-label="English" aria-pressed="false">
+              EN
+            </button>
+          </div>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Открыть меню" data-i18n-aria="nav.open">
+            <span></span>
+          </button>
+        </div>
       </div>
     </header>
 
     <main>
       <section class="hero">
-        <img src="images/holding-laptop.jpg" alt="Viktoria standing with a laptop, in a black blazer" />
+        <img
+          src="images/holding-laptop.jpg"
+          alt="Виктория с ноутбуком, в чёрном пиджаке"
+          data-i18n-alt="alt.hero"
+        />
         <div class="hero-copy">
-          <p class="script">Luxury Social Media Management</p>
-          <h1>Online Business Growth Coach</h1>
-          <p class="kicker">For female-led businesses</p>
-          <a class="btn btn-light" href="inquire.html">Let’s begin</a>
+          <p class="script" data-i18n="home.hero.name">Виктория Побережная</p>
+          <h1 data-i18n="home.hero.title">Уроки английского онлайн</h1>
+          <p class="kicker" data-i18n="home.hero.kicker">Индивидуальные занятия для детей и взрослых</p>
+          <a class="btn btn-light" href="inquire.html" data-i18n="cta.book">Записаться на урок</a>
         </div>
       </section>
 
       <section class="press">
         <div class="wrap">
-          <p>As seen in</p>
-          <div class="press-logos">
-            <span>Vogue</span>
-            <span>Forbes</span>
-            <span>the knot</span>
-            <span>Business Insider</span>
-            <span>Carats &amp; Cake</span>
-          </div>
+          <p class="credentials" data-i18n="home.credentials">
+            Дипломированный преподаватель английского · Степень магистра
+          </p>
         </div>
       </section>
 
       <section class="wrap intro">
-        <img class="obj-notes" src="images/desk-notes.jpg" alt="Viktoria writing notes at her desk" />
+        <img
+          class="obj-notes"
+          src="images/desk-notes.jpg"
+          alt="Виктория делает заметки за столом"
+          data-i18n-alt="alt.notes"
+        />
         <div class="intro-copy">
-          <h2>We design marketing plans and auto systems that increase sales and engage your audience.</h2>
-          <p>
-            Through luxury social media management and strategy, we connect you with the
-            audiences you actually want to serve.
+          <h2 data-i18n="home.intro.title">Учите английский и сразу применяйте его на практике</h2>
+          <p data-i18n="home.intro.body">
+            Я подбираю задания под ваш уровень и цели. Разбираем грамматику на понятных примерах, учим полезные фразы и сразу используем их в разговоре.
           </p>
-          <a class="btn btn-dark" href="inquire.html">Let’s begin</a>
+          <a class="btn btn-dark" href="inquire.html" data-i18n="cta.book">Записаться на урок</a>
         </div>
-        <img class="obj-keys" src="images/hands-typing.jpg" alt="Hands with pale pink nails typing on a laptop" />
-      </section>
-
-      <section class="split">
-        <img class="obj-work" src="images/at-laptop.jpg" alt="Viktoria working at her laptop" />
-        <div class="split-copy">
-          <div>
-            <h2>Transforming brands online with inspired ideas and proven skill</h2>
-            <p>
-              High-end social presence, thoughtful content, and a strategy that turns
-              followers into clients.
-            </p>
-            <a class="btn btn-light" href="inquire.html">Get your free consultation</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="wrap manifesto">
-        <div class="photo-stack">
-          <img class="obj-profile" src="images/seated-profile.jpg" alt="Viktoria seated in profile on a white block" />
-          <img class="obj-note" src="images/focus-note.jpg" alt="Hand writing Be creative, focus on yourself" />
-        </div>
-        <div class="manifesto-copy">
-          <h2>We build high end social media presences for ambitious founders</h2>
-          <p>
-            Through luxury social media management and strategy, we connect you with
-            your dream audiences online — with the polish of a brand, not a feed of
-            leftover posts.
-          </p>
-          <div class="link-stack">
-            <a href="services.html">See the packages</a>
-            <a href="inquire.html">Work with us</a>
-          </div>
-        </div>
+        <img
+          class="obj-keys"
+          src="images/hands-typing.jpg"
+          alt="Руки с бледно-розовым маникюром печатают на ноутбуке"
+          data-i18n-alt="alt.hands"
+        />
       </section>
 
       <section class="wrap reviews">
         <div>
-          <p class="label">Reviews</p>
+          <h2 class="label" data-i18n="home.reviews.label">Отзывы</h2>
           <blockquote>
-            <h2>I’m so glad I found Viktoria.</h2>
-            <p>
-              Viktoria exploded my social media growth and blew up my community. I now
-              get way more engagement and DM enquiries than ever before.
+            <p data-i18n="home.reviews.q1">
+              «Я занимаюсь всего два месяца, но уже вижу результаты в speaking, который всегда был для меня проблемой, но теперь я чувствую себя намного увереннее».
             </p>
-            <cite>← Katya Dennis</cite>
+            <cite data-i18n="home.reviews.a1">Ученица</cite>
+          </blockquote>
+          <blockquote>
+            <p data-i18n="home.reviews.q2">
+              «Спасибо вам огромное! Для неё очень важны занятия с вами и ваша поддержка 💜»
+            </p>
+            <cite data-i18n="home.reviews.a2">Мама ученицы</cite>
           </blockquote>
         </div>
-        <img class="obj-call" src="images/on-a-call.jpg" alt="Viktoria on a phone call beside her laptop" />
+        <img
+          class="obj-call"
+          src="images/on-a-call.jpg"
+          alt="Виктория разговаривает по телефону рядом с ноутбуком"
+          data-i18n-alt="alt.call"
+        />
       </section>
 
       <section class="solutions">
         <div class="wrap">
-          <h2>Our Solutions</h2>
+          <h2 data-i18n="home.solutions.title">Что мы отрабатываем на занятиях</h2>
           <div class="accordion">
             <article class="accordion-item is-open">
               <h3>
                 <button type="button" aria-expanded="true">
-                  <span>Social Media</span><span>−</span>
+                  <span data-i18n="home.acc1.title">Говорить увереннее</span><span>−</span>
                 </button>
               </h3>
-              <div class="accordion-panel">
-                Editorial feeds, caption strategy, and a posting rhythm that feels
-                expensive — because it is.
+              <div class="accordion-panel" data-i18n="home.acc1.body">
+                Тренируем разговоры, которые пригодятся в жизни: от знакомства и общения в поездке до звонка или встречи на работе.
               </div>
             </article>
             <article class="accordion-item">
               <h3>
                 <button type="button" aria-expanded="false">
-                  <span>Email Marketing</span><span>+</span>
+                  <span data-i18n="home.acc2.title">Разобраться в грамматике</span><span>+</span>
                 </button>
               </h3>
-              <div class="accordion-panel">
-                Welcome sequences, launches, and newsletters that move people from
-                saved posts to booked clients.
+              <div class="accordion-panel" data-i18n="home.acc2.body">
+                Разбираем сложные темы на понятных примерах и сразу пробуем использовать новые конструкции в своих фразах.
               </div>
             </article>
             <article class="accordion-item">
               <h3>
                 <button type="button" aria-expanded="false">
-                  <span>Copywriting</span><span>+</span>
+                  <span data-i18n="home.acc3.title">Лучше понимать английский на слух</span><span>+</span>
                 </button>
               </h3>
-              <div class="accordion-panel">
-                Brand voice, offers, and campaign copy with the restraint and clarity
-                luxury brands require.
+              <div class="accordion-panel" data-i18n="home.acc3.body">
+                Смотрим короткие фрагменты любимых сериалов, фильмов или мультфильмов. Разбираем фразы на слух и обсуждаем, что услышали.
               </div>
             </article>
             <article class="accordion-item">
               <h3>
                 <button type="button" aria-expanded="false">
-                  <span>Video Production</span><span>+</span>
+                  <span data-i18n="home.acc4.title">Подготовиться к НМТ по английскому</span><span>+</span>
                 </button>
               </h3>
-              <div class="accordion-panel">
-                Reels, talking-head direction, and short-form content that still looks
-                like a campaign.
+              <div class="accordion-panel" data-i18n="home.acc4.body">
+                Знакомимся с форматом теста, решаем задания и разбираем ошибки, чтобы понять, что ещё нужно подтянуть.
               </div>
             </article>
           </div>
@@ -172,58 +163,67 @@
 
       <section class="stats wrap">
         <div>
-          <strong>100+</strong>
-          <span>Happy Clients</span>
+          <strong>1:1</strong>
+          <span data-i18n="home.stat1">Индивидуальные уроки</span>
         </div>
         <div>
-          <strong>8</strong>
-          <span>Years Experience</span>
+          <strong>8+</strong>
+          <span data-i18n="home.stat2">Лет репетиторства</span>
         </div>
         <div>
-          <strong>75</strong>
-          <span>Campaigns</span>
+          <strong>4</strong>
+          <span data-i18n="home.stat3">Направления занятий</span>
         </div>
         <div>
-          <strong>120+</strong>
-          <span>Projects finished</span>
+          <strong data-i18n="home.stat4.value">Фидбэк</strong>
+          <span data-i18n="home.stat4">По каждому домашнему заданию</span>
         </div>
       </section>
 
       <section class="wrap meet">
-        <img class="obj-meet" src="images/with-laptop.jpg" alt="Viktoria seated with a laptop, looking at the camera" />
+        <img
+          class="obj-meet"
+          src="images/with-laptop.jpg"
+          alt="Виктория с ноутбуком смотрит в камеру"
+          data-i18n-alt="alt.meet"
+        />
         <div>
-          <h2>Meet Viktoria</h2>
-          <p>
-            At our studio, we don’t just manage social media. We curate experiences.
+          <h2 data-i18n="home.meet.title">Познакомимся? Я Виктория</h2>
+          <p data-i18n="home.meet.p1">
+            Я дипломированный преподаватель английского. Провожу индивидуальные онлайн-уроки для детей и взрослых.
           </p>
-          <p>
-            With an unwavering passion for aesthetics and a keen understanding of the
-            ever-evolving digital landscape, Viktoria embarked on a journey to redefine
-            social media management for female-led brands.
+          <p data-i18n="home.meet.p2">
+            Я преподавала в школе, морском колледже и онлайн-школах. Сейчас готовлю уроки под цели каждого ученика: от первых фраз на английском до общения на работе и подготовки к НМТ.
           </p>
           <div class="link-stack">
-            <a href="about.html">Read more</a>
+            <a href="about.html" data-i18n="home.meet.more">Больше обо мне</a>
           </div>
-          <p class="signature">Xoxo, Viktoria</p>
+          <p class="signature" data-i18n="home.signature">Ваш преподаватель английского, Виктория</p>
         </div>
       </section>
 
       <section class="gameplan">
-        <img class="obj-bw" src="images/laptop-bw.jpg" alt="Viktoria looking at a laptop, in black and white" />
+        <img
+          class="obj-bw"
+          src="images/laptop-bw.jpg"
+          alt="Виктория смотрит на ноутбук, чёрно-белое фото"
+          data-i18n-alt="alt.bw"
+        />
         <div class="gameplan-copy">
-          <p>Game plan</p>
-          <h2>Social Media Check-Up: Boost Your Growth and Engagement</h2>
-          <a class="btn btn-light" href="inquire.html">Read more</a>
+          <p data-i18n="home.banner.label">Первый шаг</p>
+          <h2 data-i18n="home.banner.title">Расскажите, зачем вам английский, и мы решим, с чего начать</h2>
+          <a class="btn btn-light" href="inquire.html" data-i18n="cta.book">Записаться на урок</a>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="wrap">
-        <p>&copy; <span data-year></span> Viktoria</p>
-        <p>Luxury social for female-led businesses</p>
+        <p>© <span data-year></span> <span data-i18n="footer.name">Виктория Побережная</span></p>
+        <p data-i18n="footer.tagline">Индивидуальные уроки английского онлайн</p>
       </div>
     </footer>
+    <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

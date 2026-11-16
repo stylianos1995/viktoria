@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Portfolio | Viktoria</title>
+    <title data-i18n="meta.portfolio.title">Портфолио | Виктория Побережная</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&family=Jost:wght@300;400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
@@ -15,53 +15,83 @@
   <body>
     <header class="site-header">
       <div class="header-inner">
-        <a class="logo" href="index.html">Viktoria</a>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open menu">
-          <span></span>
-        </button>
-        <nav class="site-nav" aria-label="Primary">
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="services.html">Services</a>
-          <a href="portfolio.html" aria-current="page">Portfolio</a>
-          <a href="inquire.html">Inquire</a>
-        </nav>
+        <a class="logo" href="index.html" data-i18n="logo">Виктория</a>
+        <div class="header-end">
+          <nav class="site-nav" aria-label="Основное меню" data-i18n-aria="nav.label">
+            <a href="index.html" data-i18n="nav.home">Главная</a>
+            <a href="about.html" data-i18n="nav.about">Обо мне</a>
+            <a href="services.html" data-i18n="nav.lessons">Занятия</a>
+            <a href="inquire.html" data-i18n="nav.book">Записаться</a>
+          </nav>
+          <div class="lang-switch" role="group" aria-label="Язык" data-i18n-aria="lang.label">
+            <button type="button" data-set-lang="ru" data-i18n-aria="lang.ru" aria-label="Русский" aria-pressed="true">
+              RU
+            </button>
+            <span aria-hidden="true">/</span>
+            <button type="button" data-set-lang="en" data-i18n-aria="lang.en" aria-label="English" aria-pressed="false">
+              EN
+            </button>
+          </div>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Открыть меню" data-i18n-aria="nav.open">
+            <span></span>
+          </button>
+        </div>
       </div>
     </header>
 
     <main>
       <section class="page-hero wrap">
-        <p class="kicker">Selected work</p>
-        <h1>Portfolio</h1>
-        <p>A glimpse of the worlds we build for ambitious founders.</p>
+        <p class="kicker" data-i18n="portfolio.kicker">Фото</p>
+        <h1 data-i18n="portfolio.title">Портфолио</h1>
+        <p data-i18n="portfolio.lead">Индивидуальные уроки английского онлайн</p>
       </section>
 
       <section class="wrap portfolio-grid">
         <figure>
-          <img src="images/holding-laptop.jpg" alt="Viktoria standing with a laptop" />
-          <figcaption>Studio portrait</figcaption>
+          <img
+            src="images/holding-laptop.jpg"
+            alt="Виктория с ноутбуком, в чёрном пиджаке"
+            data-i18n-alt="alt.hero"
+          />
+          <figcaption data-i18n="portfolio.c1">Студийный портрет</figcaption>
         </figure>
         <figure>
-          <img class="obj-notes" src="images/desk-notes.jpg" alt="Viktoria writing at her desk" />
-          <figcaption>At the desk</figcaption>
+          <img
+            class="obj-notes"
+            src="images/desk-notes.jpg"
+            alt="Виктория делает заметки за столом"
+            data-i18n-alt="alt.notes"
+          />
+          <figcaption data-i18n="portfolio.c2">За столом</figcaption>
         </figure>
         <figure>
-          <img class="obj-call" src="images/on-a-call.jpg" alt="Viktoria on a phone call" />
-          <figcaption>On a call</figcaption>
+          <img
+            class="obj-call"
+            src="images/on-a-call.jpg"
+            alt="Виктория разговаривает по телефону рядом с ноутбуком"
+            data-i18n-alt="alt.call"
+          />
+          <figcaption data-i18n="portfolio.c3">На звонке</figcaption>
         </figure>
         <figure>
-          <img class="obj-words" src="images/be-creative.jpg" alt="Hand writing the words Be creative" />
-          <figcaption>Be creative</figcaption>
+          <img
+            class="obj-words"
+            src="images/be-creative.jpg"
+            alt="Рука пишет «Be creative»"
+            data-i18n-alt="alt.words"
+          />
+          <figcaption data-i18n="portfolio.c4">Be creative</figcaption>
         </figure>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="wrap">
-        <p>&copy; <span data-year></span> Viktoria</p>
-        <p>Luxury social for female-led businesses</p>
+        <p>© <span data-year></span> <span data-i18n="footer.name">Виктория Побережная</span></p>
+        <p data-i18n="footer.tagline">Индивидуальные уроки английского онлайн</p>
       </div>
     </footer>
+    <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

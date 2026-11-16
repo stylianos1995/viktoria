@@ -9,9 +9,8 @@
   --white: #ffffff;
   --max: 72rem;
   --header: 4.25rem;
-  --sans: "Jost", system-ui, sans-serif;
+  --sans: "Manrope", system-ui, sans-serif;
   --serif: "Cormorant Garamond", "Times New Roman", serif;
-  --script: "Great Vibes", cursive;
 }
 
 *,
@@ -65,11 +64,53 @@ a {
 }
 
 .logo {
+  flex-shrink: 0;
   font-family: var(--serif);
-  font-size: 1.45rem;
-  letter-spacing: 0.28em;
+  font-size: 1.35rem;
+  letter-spacing: 0.18em;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.header-end {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  flex-shrink: 0;
+}
+
+.lang-switch span {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.72rem;
+}
+
+.lang-switch button {
+  border: 0;
+  background: none;
+  padding: 0.35rem 0.2rem;
+  color: rgba(255, 255, 255, 0.55);
+  font: inherit;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  cursor: pointer;
+}
+
+.lang-switch button[aria-pressed="true"],
+.lang-switch button:hover {
+  color: var(--white);
+}
+
+.lang-switch button:focus-visible,
+.nav-toggle:focus-visible,
+.site-nav a:focus-visible {
+  outline: 1px solid rgba(255, 255, 255, 0.75);
+  outline-offset: 3px;
 }
 
 .nav-toggle {
@@ -109,15 +150,16 @@ a {
 
 .site-nav {
   display: flex;
-  gap: 1.6rem;
+  gap: 1.25rem;
 }
 
 .site-nav a {
   color: var(--white);
   text-decoration: none;
   font-size: 0.72rem;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .site-nav a:hover,
@@ -154,9 +196,11 @@ a {
 
 .hero-copy .script {
   margin: 0 0 0.6rem;
-  font-family: var(--script);
-  font-size: clamp(2.4rem, 6vw, 4.4rem);
-  font-weight: 400;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-weight: 500;
+  letter-spacing: 0.03em;
   line-height: 1.15;
 }
 
@@ -169,10 +213,12 @@ a {
 }
 
 .kicker {
-  margin: 1rem 0 0;
+  margin: 1rem auto 0;
+  max-width: 40rem;
   font-size: 0.72rem;
-  letter-spacing: 0.28em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
+  line-height: 1.6;
 }
 
 .btn {
@@ -186,7 +232,9 @@ a {
   color: inherit;
   text-decoration: none;
   font-size: 0.72rem;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.14em;
+  line-height: 1.4;
+  text-align: center;
   text-transform: uppercase;
 }
 
@@ -213,31 +261,14 @@ a {
   text-align: center;
 }
 
-.press p {
-  margin: 0 0 1.1rem;
-  font-size: 0.68rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
-.press-logos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.6rem 2.4rem;
+.credentials {
+  margin: 0 auto;
+  max-width: 40rem;
   font-family: var(--serif);
-  font-size: 1.35rem;
-  letter-spacing: 0.08em;
-}
-
-.press-logos span:nth-child(2) {
-  font-style: italic;
-}
-
-.press-logos span:nth-child(4) {
-  letter-spacing: 0.22em;
-  font-size: 1.05rem;
+  font-size: clamp(1.25rem, 2.4vw, 1.65rem);
+  letter-spacing: 0.02em;
+  line-height: 1.45;
+  color: var(--ink);
 }
 
 .intro {
@@ -310,6 +341,10 @@ a {
   margin: 0 auto;
   max-width: 28rem;
   color: var(--muted);
+}
+
+.body-copy + .body-copy {
+  margin-top: 1.05rem;
 }
 
 .split {
@@ -413,30 +448,31 @@ a {
   border-top: 1px solid var(--line);
 }
 
-.reviews .label {
-  margin: 0 0 1rem;
+.reviews h2.label {
+  margin: 0 0 1.4rem;
+  font-family: var(--sans);
   font-size: 0.72rem;
+  font-weight: 400;
   letter-spacing: 0.24em;
   text-transform: uppercase;
+  line-height: 1.4;
 }
 
 .reviews blockquote {
   margin: 0;
 }
 
-.reviews h2 {
-  margin: 0 0 1.2rem;
-  font-family: var(--serif);
-  font-size: clamp(1.8rem, 3.4vw, 2.8rem);
-  font-weight: 400;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  line-height: 1.2;
+.reviews blockquote + blockquote {
+  margin-top: 2rem;
 }
 
-.reviews p {
-  color: var(--muted);
-  max-width: 32rem;
+.reviews blockquote p {
+  margin: 0;
+  max-width: 34rem;
+  font-family: var(--serif);
+  font-size: clamp(1.25rem, 2vw, 1.6rem);
+  line-height: 1.45;
+  color: var(--ink);
 }
 
 .reviews cite {
@@ -484,6 +520,7 @@ a {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 1rem;
   padding: 1.15rem 0;
   border: 0;
@@ -491,11 +528,18 @@ a {
   color: var(--ink);
   font-family: var(--serif);
   font-size: 1.35rem;
+  line-height: 1.3;
   text-align: left;
   cursor: pointer;
 }
 
+.accordion button span:first-child {
+  flex: 1;
+  min-width: 0;
+}
+
 .accordion button span:last-child {
+  flex-shrink: 0;
   font-family: var(--sans);
   font-size: 1.2rem;
 }
@@ -521,14 +565,23 @@ a {
 
 .stats strong {
   display: block;
-  font-family: var(--serif);
-  font-size: clamp(2.2rem, 4vw, 3.4rem);
-  font-weight: 400;
+  font-family: var(--sans);
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+  font-weight: 500;
+  letter-spacing: 0.02em;
 }
 
 .stats span {
+  display: block;
+  max-width: 14rem;
+  margin: 0.35rem auto 0;
   color: var(--muted);
   font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.stats strong {
+  line-height: 1.1;
 }
 
 .meet {
@@ -548,11 +601,12 @@ a {
 .meet h2 {
   margin: 0 0 1rem;
   font-family: var(--serif);
-  font-size: 2rem;
+  font-size: clamp(1.7rem, 3vw, 2.2rem);
   font-weight: 400;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   text-align: center;
+  line-height: 1.25;
 }
 
 .meet p {
@@ -561,8 +615,16 @@ a {
 
 .signature {
   margin: 1.4rem 0 0;
-  font-family: var(--script);
-  font-size: 2.6rem;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1.45rem, 2.4vw, 1.9rem);
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--ink);
+}
+
+.meet .signature {
+  color: var(--ink);
 }
 
 .gameplan {
@@ -619,8 +681,12 @@ a {
 
 .page-hero p {
   margin: 0.6rem auto 0;
-  max-width: 36rem;
+  max-width: 40rem;
   color: var(--muted);
+}
+
+.page-hero .kicker {
+  margin-bottom: 0.85rem;
 }
 
 .packages,
@@ -645,8 +711,43 @@ a {
 .card h3 {
   margin: 0 0 0.8rem;
   font-family: var(--serif);
-  font-size: 1.7rem;
+  font-size: clamp(1.35rem, 2vw, 1.7rem);
   font-weight: 400;
+  line-height: 1.25;
+}
+
+.lesson-formats,
+.approach {
+  padding-bottom: 1.5rem;
+}
+
+.lesson-formats h2,
+.approach h2 {
+  margin: 0 0 1.5rem;
+  text-align: center;
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 400;
+}
+
+.lesson-formats .packages {
+  grid-template-columns: 1fr 1fr;
+  padding-bottom: 1rem;
+}
+
+.approach {
+  padding-bottom: 5rem;
+}
+
+.approach-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.approach-cta {
+  margin: 0.4rem 0 0;
+  text-align: center;
 }
 
 .card p,
@@ -700,13 +801,32 @@ a {
 
 form {
   display: grid;
-  gap: 0.9rem;
+  gap: 1.15rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.field[hidden] {
+  display: none;
 }
 
 label {
   font-size: 0.72rem;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.1em;
+  line-height: 1.45;
   text-transform: uppercase;
+}
+
+.field-hint {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  letter-spacing: 0;
+  line-height: 1.45;
+  text-transform: none;
 }
 
 input,
@@ -737,6 +857,15 @@ textarea {
 }
 
 @media (max-width: 900px) {
+  .logo {
+    font-size: 1.15rem;
+    letter-spacing: 0.12em;
+  }
+
+  .header-end {
+    gap: 0.75rem;
+  }
+
   .nav-toggle {
     display: grid;
     place-items: center;
@@ -764,10 +893,16 @@ textarea {
   .gameplan,
   .about-grid,
   .packages,
+  .lesson-formats .packages,
+  .approach-grid,
   .portfolio-grid,
-  .inquire-layout,
-  .stats {
+  .inquire-layout {
     grid-template-columns: 1fr;
+  }
+
+  .stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 1rem;
   }
 
   .photo-stack img:first-child,
