@@ -25,6 +25,7 @@ const translations = {
     "home.hero.title": "Уроки английского онлайн",
     "home.hero.kicker": "Индивидуальные занятия для детей и взрослых",
     "home.credentials": "Дипломированный преподаватель английского · Степень магистра",
+    "home.intro.cta": "Посмотреть форматы занятий",
     "home.intro.title": "Учите английский и сразу применяйте его на практике",
     "home.intro.body":
       "Я подбираю задания под ваш уровень и цели. Разбираем грамматику на понятных примерах, учим полезные фразы и сразу используем их в разговоре.",
@@ -156,6 +157,7 @@ const translations = {
     "home.hero.title": "Online English lessons",
     "home.hero.kicker": "One-to-one lessons for children and adults",
     "home.credentials": "Qualified English teacher · Master’s degree",
+    "home.intro.cta": "Explore lessons",
     "home.intro.title": "Learn English and put it into practice",
     "home.intro.body":
       "I tailor each lesson to your level and goals. We explore grammar through clear examples, learn useful phrases and use them in conversation straight away.",
