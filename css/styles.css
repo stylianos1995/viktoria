@@ -842,6 +842,7 @@ a {
 }
 
 form {
+  position: relative;
   display: grid;
   gap: 1.15rem;
 }
@@ -896,6 +897,26 @@ textarea {
 
 .form-success.is-visible {
   display: block;
+}
+
+.form-error {
+  margin: 1rem 0 0;
+  color: #8a3b32;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.btn:disabled {
+  opacity: 0.55;
+  cursor: progress;
+}
+
+.hp-field {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
 @media (max-width: 900px) {

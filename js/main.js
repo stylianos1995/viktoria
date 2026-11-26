@@ -43,11 +43,68 @@ if (who) {
   syncChildField();
 }
 
+const inquireEndpoint = "https://formsubmit.co/ajax/vikadovga38@gmail.com";
+
 if (form && success) {
-  form.addEventListener("submit", (event) => {
+  const error = form.querySelector(".form-error");
+  const button = form.querySelector("[type='submit']");
+
+  form.addEventListener("submit", async (event) => {
     event.preventDefault();
     if (!form.reportValidity()) return;
-    form.hidden = true;
-    success.classList.add("is-visible");
+
+    const honey = form.querySelector("[name='_honey']");
+    if (honey && honey.value) {
+      form.hidden = true;
+      success.classList.add("is-visible");
+      return;
+    }
+
+    const data = new FormData(form);
+    const name = String(data.get("name") || "").trim();
+    const email = String(data.get("email") || "").trim();
+    const contact = String(data.get("contact") || "").trim();
+    const goals = String(data.get("goals") || "").trim();
+    const forChild = data.get("who") === "child";
+    const payload = {
+      Имя: name,
+      Email: email,
+      "Способ связи": contact || "—",
+      "Для кого занятия": forChild ? "Для моего ребёнка" : "Для меня",
+      Цели: goals || "—",
+      _subject: `Новая заявка на занятия — ${name}`,
+      _replyto: email,
+      _template: "table",
+      _captcha: "false",
+    };
+    if (forChild) {
+      payload["Возраст ребёнка"] = String(data.get("childAge") || "").trim() || "—";
+    }
+
+    if (button) {
+      button.disabled = true;
+      button.textContent = i18n ? i18n.t("form.sending") : "Отправляем…";
+    }
+    if (error) error.hidden = true;
+
+    try {
+      const response = await fetch(inquireEndpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok || result.success === false || result.success === "false") {
+        throw new Error("send failed");
+      }
+      form.hidden = true;
+      success.classList.add("is-visible");
+    } catch (sendError) {
+      if (error) error.hidden = false;
+      if (button) {
+        button.disabled = false;
+        button.textContent = i18n ? i18n.t("form.submit") : "Отправить заявку";
+      }
+    }
   });
 }
