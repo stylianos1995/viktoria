@@ -13,6 +13,12 @@ if (year) {
   year.textContent = String(new Date().getFullYear());
 }
 
+document.querySelectorAll(".socials a").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    if (link.getAttribute("href") === "#") event.preventDefault();
+  });
+});
+
 if (toggle && header) {
   toggle.addEventListener("click", () => {
     const open = header.classList.toggle("is-open");
@@ -67,18 +73,18 @@ if (form && success) {
     const goals = String(data.get("goals") || "").trim();
     const forChild = data.get("who") === "child";
     const payload = {
-      Имя: name,
+      "Name / Имя": name,
       Email: email,
-      "Способ связи": contact || "—",
-      "Для кого занятия": forChild ? "Для моего ребёнка" : "Для меня",
-      Цели: goals || "—",
-      _subject: `Новая заявка на занятия — ${name}`,
+      "Contact / Способ связи": contact || "—",
+      "Lessons for / Для кого занятия": forChild ? "For my child / Для моего ребёнка" : "For me / Для меня",
+      "Goals / Цели": goals || "—",
+      _subject: `New lesson enquiry / Новая заявка — ${name}`,
       _replyto: email,
       _template: "table",
       _captcha: "false",
     };
     if (forChild) {
-      payload["Возраст ребёнка"] = String(data.get("childAge") || "").trim() || "—";
+      payload["Child's age / Возраст ребёнка"] = String(data.get("childAge") || "").trim() || "—";
     }
 
     if (button) {
