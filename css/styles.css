@@ -459,7 +459,20 @@ a {
 }
 
 .reviews blockquote {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0 1.15rem;
+  align-items: start;
   margin: 0;
+}
+
+.review-avatar {
+  width: 4.25rem;
+  height: 4.25rem;
+  margin-top: 0.15rem;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 18%;
 }
 
 .reviews blockquote + blockquote {
@@ -484,7 +497,7 @@ a {
   text-transform: uppercase;
 }
 
-.reviews img {
+.reviews > img {
   width: 100%;
   height: 22rem;
   object-fit: cover;
@@ -674,6 +687,21 @@ a {
   gap: 1rem;
 }
 
+.lessons-page {
+  position: relative;
+  isolation: isolate;
+}
+
+.lessons-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url("../images/at-laptop.jpg") center 32% / cover no-repeat;
+  opacity: 0.18;
+  pointer-events: none;
+  z-index: -1;
+}
+
 .page-hero {
   padding: 5.5rem 0 3rem;
   text-align: center;
@@ -722,7 +750,8 @@ a {
 }
 
 .lesson-formats h2,
-.approach h2 {
+.approach h2,
+.faq h2 {
   margin: 0 0 1.5rem;
   text-align: center;
   font-family: var(--serif);
@@ -736,7 +765,19 @@ a {
 }
 
 .approach {
+  padding-bottom: 2.5rem;
+}
+
+.faq {
   padding-bottom: 5rem;
+}
+
+.faq .accordion {
+  border-bottom: 1px solid var(--line);
+}
+
+.card p + p {
+  margin-top: 0.85rem;
 }
 
 .approach-grid {

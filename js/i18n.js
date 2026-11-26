@@ -82,9 +82,9 @@ const translations = {
     "lessons.opt2.title": "Business English · Английский для работы",
     "lessons.opt2.body":
       "Подбираю лексику и задания под вашу сферу и рабочие задачи. Тренируем то, что вам нужно чаще всего: переписку, встречи, звонки и общение с коллегами или клиентами.",
-    "lessons.opt3.title": "English for Kids · Английский для детей",
+    "lessons.opt3.title": "Английский для детей и подростков",
     "lessons.opt3.body":
-      "Помогаю ребёнку освоить базу, разобраться со школьными темами и увереннее говорить. Использую картинки, интерактивные карточки и задания по мотивам любимых игр ребёнка. Если уровень позволяет, смотрим короткие фрагменты любимых мультфильмов и разбираем фразы из них.",
+      "Помогаю освоить базу, разобраться со школьными темами и увереннее говорить. Подбираю задания под возраст, уровень и интересы ученика — с играми, мультфильмами, фильмами и сериалами, чтобы использовать английский за пределами учебника.",
     "lessons.opt4.title": "Подготовка к НМТ по английскому",
     "lessons.opt4.body":
       "Знакомимся с форматом теста, решаем задания в формате НМТ и разбираем темы, которые вызывают трудности.",
@@ -95,6 +95,22 @@ const translations = {
     "lessons.homework.title": "Обратная связь по каждому домашнему заданию",
     "lessons.homework.body":
       "Я проверяю работу и объясняю ошибки. Если что-то осталось непонятным, возвращаемся к этому на уроке, разбираем на другом примере и пробуем ещё раз.",
+    "lessons.length.title": "Платформа и длительность",
+    "lessons.length.platform":
+      "Платформа. Занятия проходят онлайн в Zoom. Если вам удобнее другая платформа, подберём альтернативу.",
+    "lessons.length.duration": "Длительность. Стандартный урок — 60 минут. По запросу — 90 минут.",
+    "lessons.faq.title": "Частые вопросы",
+    "lessons.faq.q1": "Что делать, если я не знаю свой уровень?",
+    "lessons.faq.a1":
+      "Это нормально! На первом занятии определим ваш уровень и обсудим цели, чтобы подобрать подходящие материалы и темп обучения.",
+    "lessons.faq.q2": "Можно ли начать с нуля?",
+    "lessons.faq.a2": "Конечно! Начнём с основ и будем постепенно двигаться вперёд в комфортном для вас темпе.",
+    "lessons.faq.q3": "Нужно ли покупать учебник?",
+    "lessons.faq.a3":
+      "Покупать учебник не нужно. Я подбираю учебные материалы под ваш уровень и цели и отправляю всё необходимое в электронном виде, в том числе в PDF.",
+    "lessons.faq.q4": "Как выбрать расписание?",
+    "lessons.faq.a4":
+      "Согласуем удобное время вместе. Можно заниматься по постоянному расписанию или договариваться о времени следующих уроков отдельно — под ваш запрос и с учётом свободных мест.",
     "inquire.kicker": "Учитесь со мной",
     "inquire.h1": "Запись на занятия",
     "inquire.lead":
@@ -212,9 +228,9 @@ const translations = {
     "lessons.opt2.title": "Business English · English for work",
     "lessons.opt2.body":
       "I choose vocabulary and activities that fit your field and the tasks you handle at work. We practise what you need most, from writing emails and joining meetings to making calls and speaking with colleagues or clients.",
-    "lessons.opt3.title": "English for Kids",
+    "lessons.opt3.title": "English for children and teens",
     "lessons.opt3.body":
-      "I help children build a foundation, understand what they’re learning at school and feel more confident speaking. I use pictures, interactive flashcards and activities based on their favourite games. When their level allows, we watch short clips from their favourite cartoons and explore phrases from them.",
+      "I help young learners build a foundation in English, understand school topics and speak more confidently. I tailor activities to each learner’s age, level and interests, using games, cartoons, films and TV shows to bring English beyond the textbook.",
     "lessons.opt4.title": "NMT English preparation",
     "lessons.opt4.body":
       "We get familiar with the English section of Ukraine’s National Multi-Subject Test, practise exam-style questions and work through the topics you find most difficult.",
@@ -225,6 +241,22 @@ const translations = {
     "lessons.homework.title": "Feedback on every homework assignment",
     "lessons.homework.body":
       "I check your work and explain any mistakes. If something is still unclear, we go over it again in class with a different example and give it another try.",
+    "lessons.length.title": "Platform and lesson length",
+    "lessons.length.platform":
+      "Platform. Lessons take place online via Zoom. If you prefer another platform, we’ll find an alternative.",
+    "lessons.length.duration": "Duration. A standard lesson lasts 60 minutes. A 90-minute lesson is available on request.",
+    "lessons.faq.title": "Frequently asked questions",
+    "lessons.faq.q1": "What if I don’t know my English level?",
+    "lessons.faq.a1":
+      "That’s absolutely fine! In our first lesson, we’ll assess your level and discuss your goals so I can choose suitable materials and a pace that works for you.",
+    "lessons.faq.q2": "Can I start as a complete beginner?",
+    "lessons.faq.a2": "Absolutely! We’ll start with the basics and build your English step by step at a pace that suits you.",
+    "lessons.faq.q3": "Do I need to buy a textbook?",
+    "lessons.faq.a3":
+      "You don’t need to buy a textbook. I choose materials to suit your level and goals and share everything you need digitally, including PDFs.",
+    "lessons.faq.q4": "How do we arrange the schedule?",
+    "lessons.faq.a4":
+      "We’ll agree on times that work for both of us. You can have a regular weekly schedule or arrange lessons individually, depending on your needs and my availability.",
     "inquire.kicker": "Learn with me",
     "inquire.h1": "Inquire",
     "inquire.lead":
