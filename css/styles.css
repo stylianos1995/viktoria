@@ -1033,3 +1033,81 @@ textarea {
     flex-direction: column;
   }
 }
+
+.load-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  display: grid;
+  place-items: center;
+  background: var(--black);
+  color: var(--cream);
+  animation: load-lift 0.7s cubic-bezier(0.76, 0, 0.24, 1) 1.05s forwards;
+}
+
+.load-screen-name {
+  margin: 0;
+  padding-inline: 1.25rem;
+  font-family: var(--serif);
+  font-size: clamp(2.15rem, 6.5vw, 3.6rem);
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  line-height: 1;
+  text-indent: 0.18em;
+  text-transform: uppercase;
+  animation: load-name 0.7s ease both;
+}
+
+.load-screen-name::after {
+  content: "";
+  display: block;
+  width: 2.25rem;
+  height: 1px;
+  margin: 1.05rem auto 0;
+  background: var(--cream);
+  transform: scaleX(0);
+  transform-origin: center;
+  animation: load-rule 0.45s ease 0.4s forwards;
+}
+
+html.intro-seen .load-screen {
+  display: none;
+  animation: none;
+}
+
+html:has(.load-screen):not(.intro-seen) {
+  overflow: hidden;
+}
+
+@keyframes load-name {
+  from {
+    opacity: 0;
+    transform: translateY(0.4rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes load-rule {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes load-lift {
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .load-screen {
+    display: none;
+  }
+
+  html:has(.load-screen) {
+    overflow: auto;
+  }
+}

@@ -1,6 +1,23 @@
 const i18n = window.ViktoriaI18n;
 if (i18n) i18n.initLanguage();
 
+const loadScreen = document.querySelector(".load-screen");
+if (loadScreen) {
+  const dismissLoadScreen = () => {
+    if (!loadScreen.isConnected) return;
+    loadScreen.remove();
+  };
+  const introSeen = document.documentElement.classList.contains("intro-seen");
+  if (introSeen || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    dismissLoadScreen();
+  } else {
+    loadScreen.addEventListener("animationend", (event) => {
+      if (event.animationName === "load-lift") dismissLoadScreen();
+    });
+    setTimeout(dismissLoadScreen, 2200);
+  }
+}
+
 const header = document.querySelector(".site-header");
 const toggle = document.querySelector(".nav-toggle");
 const year = document.querySelector("[data-year]");

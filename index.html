@@ -20,6 +20,20 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   </head>
   <body>
+    <script>
+      try {
+        if (sessionStorage.getItem("viktoria-intro")) {
+          document.documentElement.classList.add("intro-seen");
+        } else {
+          sessionStorage.setItem("viktoria-intro", "1");
+        }
+      } catch (error) {
+        /* storage can be unavailable */
+      }
+    </script>
+    <div class="load-screen" aria-hidden="true">
+      <p class="load-screen-name" data-i18n="logo">Виктория</p>
+    </div>
     <header class="site-header">
       <div class="header-inner">
         <a class="logo" href="index.html" data-i18n="logo">Виктория</a>
