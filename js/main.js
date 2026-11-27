@@ -13,9 +13,29 @@ if (year) {
   year.textContent = String(new Date().getFullYear());
 }
 
+let socialNote;
+let socialTimer;
+
 document.querySelectorAll(".socials a").forEach((link) => {
   link.addEventListener("click", (event) => {
-    if (link.getAttribute("href") === "#") event.preventDefault();
+    if (link.getAttribute("href") !== "#") return;
+    event.preventDefault();
+    if (!socialNote) {
+      socialNote = document.createElement("p");
+      socialNote.className = "social-note";
+      socialNote.setAttribute("role", "status");
+      socialNote.hidden = true;
+      document.body.appendChild(socialNote);
+    }
+    socialNote.textContent = i18n ? i18n.t("social.soon") : "Ссылка скоро появится";
+    const rect = link.getBoundingClientRect();
+    socialNote.hidden = false;
+    socialNote.style.left = `${rect.left + rect.width / 2}px`;
+    socialNote.style.top = `${rect.top}px`;
+    clearTimeout(socialTimer);
+    socialTimer = setTimeout(() => {
+      socialNote.hidden = true;
+    }, 2200);
   });
 });
 

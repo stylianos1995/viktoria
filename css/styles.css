@@ -713,6 +713,25 @@ a {
   fill: currentColor;
 }
 
+.social-note {
+  position: fixed;
+  z-index: 50;
+  transform: translate(-50%, calc(-100% - 0.55rem));
+  margin: 0;
+  padding: 0.45rem 0.7rem;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.social-note[hidden] {
+  display: none;
+}
+
 .lessons-page {
   position: relative;
   isolation: isolate;
